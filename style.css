@@ -1,0 +1,117 @@
+/* style.css */
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.paint-clone {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.canvas-tools-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.canvas-wrapper {
+    border: 2px solid black;
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.paint-tools {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: space-between; /* Equal spacing between the three divs */
+    height: 100%; /* Make .paint-tools take up the full height */
+}
+
+.content {
+    position: relative;
+  }
+
+.action,
+.free-flow,
+.text {
+    margin: 10px 0; /* Adjusted margin for spacing between the three divs */
+}
+
+.free-flow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#brush-size {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: -5px;
+    margin-right: 10px;
+}
+
+#pen,
+#eraser,
+#clear-canvas {
+    padding: 10px;
+    margin: 0 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#pen {
+    background-color: #0800ff;
+}
+
+#eraser {
+    background-color: #ee00cf;
+}
+
+#clear-canvas {
+    background-color: #ff3333;
+}
+
+#color-picker {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+
+/*  */
+
+textarea {
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+    border-color:white;
+    overflow: hidden;
+    transition: border 0.3s; /* Adding a smooth transition effect */
+    font-family: 'Arial', sans-serif; /* Default font */
+
+  }
+
+  textarea:focus {
+    border-color: black; /* Change the border color when the textarea is focused */
+    background-color: #ffffff;
+    outline: none; /* Remove the default focus outline */
+  }
+
+  body.focused textarea {
+    background-color: white;
+  }
+
+  

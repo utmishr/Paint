@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resizable Draggable Text Editor</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+  <div class="paint-clone">
+    <div class="canvas-tools-wrapper">
+      <div class="canvas-wrapper content">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="paint-tools">
+        <div class="action">
+          <button id="undo">Undo</button>
+          <button id="redo">Redo</button>
+        </div>
+        <div class="free-flow">
+          <input type="range" id="brush-size" min="1" max="50" value="5">
+          <input type="color" id="color-picker">
+          <button id="pen">Pen</button>
+          <button id="eraser">Eraser</button>
+          <button id="clear-canvas">Clear</button>
+        </div>
+        <div class="text">
+          <button onclick="addEditor()">Add Editor</button>
+          <label for="fontSelector">Select Font:</label>
+          <select id="fontSelector" onchange="changeFont()">
+          <option value="Arial, sans-serif">Arial</option>
+          <option value="Georgia, serif">Georgia</option>
+          <option value="'Courier New', monospace">Courier New</option>
+        </select>
+
+        <label for="fontSizeSelector">Select Font Size:</label>
+    <select id="fontSizeSelector" onchange="changeFontSize()">
+        <option value="12px">12px</option>
+        <option value="16px">16px</option>
+        <option value="20px">20px</option>
+    </select>
+
+        </div>
+      </div>
+    </div>
+</div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
